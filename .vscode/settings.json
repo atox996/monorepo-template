@@ -1,0 +1,33 @@
+{
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  // FIXME: eslint升级v10后, 删除下面的相关配置
+  /**
+   * 开启eslint v10配置文件查找功能
+   * 开启后，eslint将根据文件路径向上查找对应的配置文件，而不是只使用项目根目录的配置文件
+   * @link https://eslint.org/docs/latest/use/configure/configuration-files#experimental-configuration-file-resolution
+   */
+  "eslint.options": {
+    "flags": ["v10_config_lookup_from_file"]
+  },
+  "eslint.lintTask.options": "--flag v10_config_lookup_from_file",
+  "explorer.excludeGitIgnore": true
+}
