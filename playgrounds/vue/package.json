@@ -1,0 +1,19 @@
+{
+  "name": "playground-vue",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "tscheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "eslint-plugin-vue": "^10.6.2",
+    "unplugin-auto-import": "^20.3.0",
+    "unplugin-vue-components": "^30.0.0",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.1.8"
+  }
+}

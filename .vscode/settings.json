@@ -19,6 +19,14 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  "explorer.excludeGitIgnore": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
   // FIXME: eslint升级v10后, 删除下面的相关配置
   /**
    * 开启eslint v10配置文件查找功能
@@ -28,6 +36,5 @@
   "eslint.options": {
     "flags": ["v10_config_lookup_from_file"]
   },
-  "eslint.lintTask.options": "--flag v10_config_lookup_from_file",
-  "explorer.excludeGitIgnore": true
+  "eslint.lintTask.options": "--flag v10_config_lookup_from_file"
 }

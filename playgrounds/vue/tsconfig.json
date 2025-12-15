@@ -1,0 +1,8 @@
+{
+  "extends": "@my/configs/tsconfig",
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": [".", "**/*.vue"],
+  "exclude": ["node_modules", "**/dist"]
+}

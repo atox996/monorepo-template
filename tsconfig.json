@@ -1,27 +1,4 @@
 {
-  "compilerOptions": {
-    /* ================= 核心配置 ================= */
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "moduleResolution": "Bundler",
-    "verbatimModuleSyntax": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-
-    /* ================= 类型检查 ================= */
-    "strict": true,
-
-    /* ================= 模块解析 ================= */
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-
-    /* ========== 类型声明输出相关 ========== */
-    "noEmit": true,
-
-    /* ========== 其他 ========== */
-    "types": ["vite/client"]
-  },
-  "exclude": ["node_modules", "**/dist"]
+  "extends": "@my/configs/tsconfig",
+  "exclude": ["node_modules", "**/dist", "playgrounds/**"]
 }

@@ -3,21 +3,21 @@
   "private": true,
   "packageManager": "pnpm@10.25.0",
   "scripts": {
+    "start": "pnpm playgrounds start",
     "lint": "pnpm prettier && pnpm eslint && pnpm tscheck",
-    "eslint": "eslint . --cache --fix",
-    "tscheck": "tsc --noEmit",
+    "eslint": "eslint . --flag v10_config_lookup_from_file --cache --fix",
+    "tscheck": "tsc --noEmit && pnpm tscheck:playgrounds",
     "prettier": "prettier . --cache --write --ignore-unknown",
+    "tscheck:playgrounds": "pnpm playgrounds tscheck",
+    "playgrounds": "pnpm --filter './playgrounds/**'",
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
-    "@eslint/js": "^9.39.1",
-    "@types/eslint-config-prettier": "^6.11.3",
+    "@my/configs": "workspace:*",
     "@types/node": "^25.0.0",
     "eslint": "^9.39.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^16.5.0",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
@@ -25,6 +25,9 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.49.0",
     "vite": "^7.2.7"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "commitlint": {
     "extends": [
